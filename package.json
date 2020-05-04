@@ -4,19 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint .",
-    "prepush": "npm run lint",
     "android.local.dev": "./node_modules/.bin/wdio tests/e2e/config/wdio.android.local.dev.conf.js",
     "android.local.emu": "./node_modules/.bin/wdio tests/e2e/config/wdio.android.local.emu.conf.js",
-    "android.rdc": "./node_modules/.bin/wdio ./tests/e2e/config/wdio.android.rdc.conf.js",
+    "android.rdc": "./node_modules/.bin/wdio ./tests/e2e/config/wdio.android.rdc.conf.js --logLevel=trace",
     "android.release": "cd android && ./gradlew assembleRelease",
     "ios.local.dev": "./node_modules/.bin/wdio tests/e2e/config/wdio.ios.local.dev.conf.js",
     "ios.local.sim": "./node_modules/.bin/wdio tests/e2e/config/wdio.ios.local.sim.conf.js",
-    "ios.rdc": "./node_modules/.bin/wdio ./tests/e2e/config/wdio.ios.rdc.conf.js",
+    "ios.rdc": "./node_modules/.bin/wdio ./tests/e2e/config/wdio.ios.rdc.conf.js --logLevel=trace",
     "ios.clear.build": "yarn clear.cache && rm -rf ./ios/build/Build/Products/Release-iphonesimulator",
     "ios.release": "react-native run-ios --configuration Release",
-    "ios.sim.build": "yarn ios.clear.build && npm run ios.release",
-    "postinstall": "npx jetify"
+    "ios.sim.build": "yarn ios.clear.build && npm run ios.release"
   },
   "keywords": [],
   "author": "",
@@ -34,29 +31,10 @@
     "@wdio/sauce-service": "^6.0.16",
     "@wdio/spec-reporter": "^6.0.16",
     "@wdio/sync": "^6.0.16",
-    "wdio-chromedriver-service": "^6.0.1",
-    "babel-eslint": "^10.0.2",
     "babel-jest": "^24.9.0",
-    "eslint": "^6.5.1",
-    "eslint-config-fb-strict": "^24.3.0",
-    "eslint-config-fbjs": "^3.1.0",
-    "eslint-plugin-eslint-comments": "^3.1.2",
-    "eslint-plugin-flowtype": "^4.5.3",
-    "eslint-plugin-jasmine": "^4.1.0",
-    "eslint-plugin-react": "^7.17.0",
-    "eslint-plugin-react-native": "^3.8.1",
-    "husky": "^3.1.0",
     "jest": "^24.9.0",
     "jetifier": "^1.6.5",
-    "metro-react-native-babel-preset": "^0.57.0",
-    "react-native-clean-project": "^3.3.0",
-    "react-test-renderer": "16.9.0",
     "wdio-native-app-compare-service": "^1.0.1",
     "yargs": "^15.0.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "yarn lint"
-    }
   }
 }
