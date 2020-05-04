@@ -1,0 +1,29 @@
+{
+  "name": "js-wdio6-client",
+  "version": "1.0.0",
+  "description": "JavaScript framework using wdio v6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nadvolod/js-wdio6-client.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nadvolod/js-wdio6-client/issues"
+  },
+  "homepage": "https://github.com/nadvolod/js-wdio6-client#readme",
+  "devDependencies": {
+    "@wdio/cli": "^6.1.7",
+    "@wdio/local-runner": "^6.1.7",
+    "@wdio/mocha-framework": "^6.1.6",
+    "@wdio/spec-reporter": "^6.1.5",
+    "@wdio/sync": "^6.1.7",
+    "chromedriver": "^81.0.0",
+    "wdio-chromedriver-service": "^6.0.3"
+  }
+}
