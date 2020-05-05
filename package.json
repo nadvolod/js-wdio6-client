@@ -6,7 +6,7 @@
   "scripts": {
     "android.local.dev": "./node_modules/.bin/wdio tests/e2e/config/wdio.android.local.dev.conf.js",
     "android.local.emu": "./node_modules/.bin/wdio tests/e2e/config/wdio.android.local.emu.conf.js",
-    "android.rdc": "./node_modules/.bin/wdio ./tests/e2e/config/wdio.android.rdc.conf.js --logLevel=trace",
+    "android.rdc": "./node_modules/.bin/wdio ./tests/e2e/config/wdio.android.rdc.conf.js --spec=hilton.open.spec.js --logLevel=trace",
     "android.release": "cd android && ./gradlew assembleRelease",
     "ios.local.dev": "./node_modules/.bin/wdio tests/e2e/config/wdio.ios.local.dev.conf.js",
     "ios.local.sim": "./node_modules/.bin/wdio tests/e2e/config/wdio.ios.local.sim.conf.js",
