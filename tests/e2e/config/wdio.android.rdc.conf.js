@@ -8,18 +8,15 @@ const { config } = require('./wdio.rdc.shared');
 // http://appium.io/docs/en/writing-running-appium/caps/#general-capabilities
 commonCapabilities: [{
   automationName: 'UiAutomator2', //automationName should always be provided for android,
-  testobject_api_key: 'DDD6116E5359449F834472020D8E78FF',
 }],
 
 config.capabilities = [
   {
     //samsung galaxy note
     deviceName: 'Samsung Galaxy S9',
-    //automationName: 'UiAutomator2', //automationName should always be provided for android
+    automationName: 'UiAutomator2', //automationName should always be provided for android
     // The api key that has a reference to the app-project in the TO cloud
-    //testobject_api_key: process.env.SAUCE_RDC_EU_ACCESS_KEY_ANDROID,
-    //testobject_api_key: process.env.SAUCE_RDC_US_ACCESS_KEY_ANDROID_SAMPLE_APP,
-    testobject_api_key: 'DDD6116E5359449F834472020D8E78FF',
+    testobject_api_key: process.env.SAUCE_RDC_US_HILTON_ANDROID,
     // The name of the test for in the cloud
     testobject_test_name: 'Samsung Galaxy S9',
     // Some default settings
@@ -38,9 +35,7 @@ config.capabilities = [
     deviceName: 'Samsung Galaxy Note 8',
     automationName: 'UiAutomator2', //automationName should always be provided for android
     // The api key that has a reference to the app-project in the TO cloud
-    //testobject_api_key: process.env.SAUCE_RDC_EU_ACCESS_KEY_ANDROID,
-    //testobject_api_key: process.env.SAUCE_RDC_US_ACCESS_KEY_ANDROID_SAMPLE_APP,
-    testobject_api_key: 'DDD6116E5359449F834472020D8E78FF',
+    testobject_api_key: process.env.SAUCE_RDC_US_HILTON_ANDROID,
     // The name of the test for in the cloud
     testobject_test_name: 'Google Pixel 3',
     platformName: 'Android',
