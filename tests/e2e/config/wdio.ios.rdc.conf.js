@@ -8,12 +8,14 @@ const { config } = require('./wdio.rdc.shared');
 // http://appium.io/docs/en/writing-running-appium/caps/#general-capabilities
 config.capabilities = [
   {
+    appiumVersion: '1.17.0',
+    autoAcceptAlerts: true,
     deviceName: 'iPhone XS*',
     deviceReadyTimeout: 60,
     // The api key that has a reference to the app-project in the TO cloud
     testobject_api_key: process.env.SAUCE_RDC_US_HILTON_IOS,
     // The name of the test for in the cloud
-    testobject_test_name: 'hilton-mobile-ios',
+    testobject_test_name: 'hilton-mobile-ios-2',
     // Some default settings
     // You can find more info in the TO Appium Basic Setup section
     platformName: 'iOS',
@@ -23,6 +25,8 @@ config.capabilities = [
     orientation: 'PORTRAIT',
     newCommandTimeout: 30,
     language: argv.language || 'en',
+    wdaEventloopIdleDelay:'5',
+    waitForQuiescence: false,
   },
 ];
 
